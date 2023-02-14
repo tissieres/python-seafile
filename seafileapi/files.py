@@ -13,7 +13,7 @@ class _SeafDirentBase(object):
     """
     isdir = None
 
-    def __init__(self, repo, path, object_id, size=0):
+    def __init__(self, repo, path, object_id, size=0, last_modifier_email=""):
         """
         :param:`path` the full path of this entry within its repo, like
         "/documents/example.md"
@@ -25,6 +25,7 @@ class _SeafDirentBase(object):
         self.path = path
         self.id = object_id
         self.size = size
+        self.last_modifier_email = last_modifier_email
 
     @property
     def name(self):
